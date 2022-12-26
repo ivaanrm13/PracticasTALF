@@ -1,0 +1,60 @@
+\documentclass[16]{article} %[Tamaño de página y número de fuente]. %Tipo del documento
+\usepackage{amsmath} %Añade comandos para ecuaciones
+\usepackage[spanish]{babel} %Indica idioma del documento
+\usepackage[utf8]{inputenc} %Permite escribir caracteres particulares del español (tildes, ñ, ...). Equivalente a poner \'a
+\usepackage{vmargin} %Para editar márgenes
+\usepackage{graphicx} %Permite instertar imágenes
+\usepackage{tikz} %Permite insertar elementos gráficos
+\usepackage[linesnumbered]{whilecode2} %Para escribir código en WHILE
+\usepackage{listings} %Para añadir códigos de programas
+
+\begin{document} %Crea el entorno del documento
+\begin{titlepage} %Portada
+	\centering  %Centra el texto
+	{\bfseries\Huge Teoría de Autómatas y Lenguajes Formales\par}
+   	\vspace{2cm} %Crea un espacio vertical
+    {\bfseries\huge Actividades Práctica 4\par}
+    \vfill %Rellena el espacio para ocupar la página entera
+    {\huge Iván Romero Molina\par}
+    \vspace{1cm}
+    {\Large Universidad de Málaga\par}
+    \vspace{1cm}
+    {\large 26 de diciembre de 2022\par}
+\end{titlepage}
+    
+\newpage
+%\thispagestyle{empty} Quita el número de página
+\section*{Ejercicio 1}
+\noindent
+Implemente en un programa WHILE que realice la suma de tres valores, se debe usar una variable auxiliar que acumule el resultado de la suma.\\\\
+Código en WHILE:
+\whileprogram{Q}{0}{
+\Copy*{\Var{$X_2$}}{\Var{$X_1$}}
+
+\Incr{\Var{$X_2$}}{1}
+\WhileSC{\Var{$X_2$}$\neq0$}
+{
+	\Copy*{\Var{$X_1$}}{1}
+}
+}{s}
+\section*{Ejercicio 2}
+\noindent
+Crea un script en Octave que enumere todos los vectores:
+\begin{lstlisting}
+function printVectors(x)
+for i=0:x-1
+disp(['( num2str(godeldecoding(i)) ')'])
+end
+end
+\end{lstlisting}
+\section*{Ejercicio 3}
+\noindent
+Crea un script en Octave que enumere todos los programas WHILE:
+\begin{lstlisting}
+function printWhilePrograms(x)
+for i=0:x-1
+disp(N2WHILE(i))
+end
+end
+\end{lstlisting}
+\end{document}
